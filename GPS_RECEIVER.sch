@@ -1,0 +1,203 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_GPS:NEO_M8N U?
+U 1 1 5BE4AEC8
+P 5800 2700
+F 0 "U?" H 5800 2815 50  0000 C CNN
+F 1 "NEO_M8N" H 5800 2724 50  0000 C CNN
+F 2 "" H 5800 2700 50  0001 C CNN
+F 3 "" H 5800 2700 50  0001 C CNN
+	1    5800 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3800 6450 3800
+Wire Wire Line
+	6450 3800 6450 3900
+Wire Wire Line
+	6350 3900 6450 3900
+Connection ~ 6450 3900
+Wire Wire Line
+	6450 3900 6450 4000
+Wire Wire Line
+	6350 4000 6450 4000
+Connection ~ 6450 4000
+Wire Wire Line
+	6450 4000 6450 4100
+Wire Wire Line
+	6350 4100 6450 4100
+Connection ~ 6450 4100
+Wire Wire Line
+	6450 4100 6450 4200
+$Comp
+L power:GND #PWR?
+U 1 1 5BE4AFED
+P 6450 4200
+F 0 "#PWR?" H 6450 3950 50  0001 C CNN
+F 1 "GND" H 6455 4027 50  0000 C CNN
+F 2 "" H 6450 4200 50  0001 C CNN
+F 3 "" H 6450 4200 50  0001 C CNN
+	1    6450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5BE4B07A
+P 7150 3500
+F 0 "#PWR?" H 7150 3350 50  0001 C CNN
+F 1 "+3V3" H 7165 3673 50  0000 C CNN
+F 2 "" H 7150 3500 50  0001 C CNN
+F 3 "" H 7150 3500 50  0001 C CNN
+	1    7150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3600 7150 3500
+Wire Wire Line
+	6350 3600 6450 3600
+Wire Wire Line
+	6350 3500 6450 3500
+Wire Wire Line
+	6450 3500 6450 3600
+Connection ~ 6450 3600
+Wire Wire Line
+	6450 3600 7150 3600
+Wire Wire Line
+	6350 3700 6450 3700
+Wire Wire Line
+	6450 3700 6450 3800
+Connection ~ 6450 3800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5BE4BE26
+P 3650 3300
+F 0 "#PWR?" H 3650 3150 50  0001 C CNN
+F 1 "+3V3" H 3665 3473 50  0000 C CNN
+F 2 "" H 3650 3300 50  0001 C CNN
+F 3 "" H 3650 3300 50  0001 C CNN
+	1    3650 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BE4BE84
+P 3650 3550
+F 0 "R?" H 3720 3596 50  0000 L CNN
+F 1 "10k" H 3720 3505 50  0000 L CNN
+F 2 "" V 3580 3550 50  0001 C CNN
+F 3 "~" H 3650 3550 50  0001 C CNN
+	1    3650 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3300 3650 3400
+Wire Wire Line
+	3650 3700 3650 3800
+Wire Wire Line
+	3650 3800 3350 3800
+Connection ~ 3650 3800
+Text HLabel 3350 3800 0    50   Input ~ 0
+RESET_GPS
+NoConn ~ 5100 4100
+Wire Wire Line
+	5100 4100 5250 4100
+NoConn ~ 5100 3150
+Wire Wire Line
+	5100 3150 5250 3150
+NoConn ~ 5100 3050
+Wire Wire Line
+	5100 3050 5250 3050
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 5BE4E28A
+P 5000 3600
+F 0 "FB?" V 4726 3600 50  0000 C CNN
+F 1 "Ferrite_Bead" V 4817 3600 50  0000 C CNN
+F 2 "" V 4930 3600 50  0001 C CNN
+F 3 "~" H 5000 3600 50  0001 C CNN
+F 4 "BLM15HD102SN1" V 5000 3600 50  0001 C CNN "Component"
+	1    5000 3600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 3600 5250 3600
+Wire Wire Line
+	5250 3700 4800 3700
+$Comp
+L Device:Ferrite_Bead FB?
+U 1 1 5BE4F049
+P 4650 3700
+F 0 "FB?" V 4924 3700 50  0000 C CNN
+F 1 "Ferrite_Bead" V 4833 3700 50  0000 C CNN
+F 2 "" V 4580 3700 50  0001 C CNN
+F 3 "~" H 4650 3700 50  0001 C CNN
+F 4 "BLM15HD102SN1" V 4650 3700 50  0001 C CNN "Component"
+	1    4650 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4500 3700 4350 3700
+Wire Wire Line
+	4850 3600 4350 3600
+Wire Wire Line
+	3650 3800 5250 3800
+Text HLabel 4350 3600 0    50   Output ~ 0
+TX_GPS
+Text HLabel 4350 3700 0    50   Input ~ 0
+RX_GPS
+$Comp
+L Device:Antenna AE?
+U 1 1 5BE51339
+P 4750 2650
+F 0 "AE?" H 4830 2641 50  0000 L CNN
+F 1 "Antenna" H 4830 2550 50  0000 L CNN
+F 2 "" H 4750 2650 50  0001 C CNN
+F 3 "~" H 4750 2650 50  0001 C CNN
+	1    4750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 2950 4750 2950
+Wire Wire Line
+	4750 2950 4750 2850
+$Comp
+L Device:C C?
+U 1 1 5BE52615
+P 3650 4050
+F 0 "C?" H 3765 4096 50  0000 L CNN
+F 1 "100nF" H 3765 4005 50  0000 L CNN
+F 2 "" H 3688 3900 50  0001 C CNN
+F 3 "~" H 3650 4050 50  0001 C CNN
+	1    3650 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 3800 3650 3900
+Wire Wire Line
+	3650 4200 3650 4300
+$Comp
+L power:GND #PWR?
+U 1 1 5BE530EE
+P 3650 4300
+F 0 "#PWR?" H 3650 4050 50  0001 C CNN
+F 1 "GND" H 3655 4127 50  0000 C CNN
+F 2 "" H 3650 4300 50  0001 C CNN
+F 3 "" H 3650 4300 50  0001 C CNN
+	1    3650 4300
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
